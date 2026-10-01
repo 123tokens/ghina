@@ -42,6 +42,23 @@
         .contract-box .copy-btn:hover { color: #FFD700; }
         .contract-box .solscan-link { color: #5A649A; text-decoration: none; font-size: 13px; font-family: 'Segoe UI', sans-serif; margin-left: 8px; }
         .contract-box .solscan-link:hover { color: #fff; }
+        .pool-box {
+            background: rgba(74,140,255,0.05); border: 1px solid rgba(74,140,255,0.15);
+            border-radius: 12px; padding: 16px; margin: 20px 0;
+            text-align: center; font-size: 13px; color: #8A94C8; font-family: 'Courier New', monospace;
+        }
+        .pool-box .addr { color: #4A8CFF; }
+        .pool-box .copy-btn { background: transparent; border: none; color: #5A649A; cursor: pointer; font-size: 13px; font-family: 'Segoe UI', sans-serif; }
+        .pool-box .copy-btn:hover { color: #4A8CFF; }
+        .pool-box .link { color: #4A8CFF; text-decoration: none; font-size: 13px; font-family: 'Segoe UI', sans-serif; margin-left: 8px; }
+        .pool-box .link:hover { color: #fff; }
+        .video-tutorial {
+            max-width: 700px; margin: 24px auto;
+            border-radius: 16px; overflow: hidden;
+            border: 2px solid rgba(255,215,0,0.3);
+            box-shadow: 0 10px 40px rgba(255,215,0,0.15);
+        }
+        .video-tutorial video { width: 100%; display: block; }
         .back-link { display: inline-block; margin-top: 20px; color: #FFD700; text-decoration: none; font-weight: 500; }
         .back-link:hover { text-decoration: underline; }
         .logo-img { height: 60px; width: auto; margin-bottom: 20px; border-radius: 50%; }
@@ -55,7 +72,7 @@
         .counter-box .counter-holders { color: #2ECC40; font-weight: 600; }
         .counter-box .counter-clients { color: #4A8CFF; font-weight: 600; }
         @media (max-width: 700px) { .method-grid { grid-template-columns: 1fr 1fr; } .glass-card { padding: 24px; } }
-        @media (max-width: 450px) { .method-grid { grid-template-columns: 1fr; } .contract-box { font-size: 11px; } }
+        @media (max-width: 450px) { .method-grid { grid-template-columns: 1fr; } .contract-box { font-size: 11px; } .pool-box { font-size: 11px; } }
     </style>
 </head>
 <body>
@@ -65,6 +82,14 @@
         <img src="https://raw.githubusercontent.com/123tokens/ghina/refs/heads/main/ghina_logo.png" alt="Ghina" class="logo-img" />
         <h1>Buy <span class="highlight">Ghina ($777)</span></h1>
         <p class="sub">Choose your preferred payment method</p>
+
+        <!-- ВИДЕО-ТУТОРИАЛ -->
+        <div class="video-tutorial">
+            <video controls playsinline poster="https://raw.githubusercontent.com/123tokens/ghina/refs/heads/main/ghina_logo.png">
+                <source src="ghina_how_to_buy.mp4" type="video/mp4">
+                Your browser does not support video.
+            </video>
+        </div>
 
         <div class="method-grid">
             <a href="https://opensea.io/token/solana/AngvUKJbhMf46uvM5sCeeLLBqz13B6gqzuLBy3tBzXAd" target="_blank" class="method-card">
@@ -77,10 +102,10 @@
                 <span class="name">Jupiter Swap</span>
                 <span class="desc">Any crypto → Ghina</span>
             </a>
-            <a href="https://solscan.io/token/AngvUKJbhMf46uvM5sCeeLLBqz13B6gqzuLBy3tBzXAd" target="_blank" class="method-card">
-                <span class="icon">🔍</span>
-                <span class="name">Solscan</span>
-                <span class="desc">Check contract</span>
+            <a href="https://www.geckoterminal.com/solana/pools/VitKKijuJGM2REPHUPeCETCLavdtFGj6VZ3vDgjiRPz" target="_blank" class="method-card">
+                <span class="icon">🌊</span>
+                <span class="name">Meteora Pool</span>
+                <span class="desc">$777/USDC • $0.0078</span>
             </a>
             <a href="https://www.binance.com/" target="_blank" class="method-card">
                 <span class="icon">🏦</span>
@@ -126,6 +151,12 @@
             📜 Contract: <span class="addr">AngvUKJbhMf46uvM5sCeeLLBqz13B6gqzuLBy3tBzXAd</span>
             <button onclick="navigator.clipboard.writeText('AngvUKJbhMf46uvM5sCeeLLBqz13B6gqzuLBy3tBzXAd')" class="copy-btn">📋 Copy</button>
             <a href="https://solscan.io/token/AngvUKJbhMf46uvM5sCeeLLBqz13B6gqzuLBy3tBzXAd" target="_blank" class="solscan-link">🔍 Solscan</a>
+        </div>
+
+        <div class="pool-box">
+            🌊 Meteora Pool ($777/USDC): <span class="addr">VitKKijuJGM2REPHUPeCETCLavdtFGj6VZ3vDgjiRPz</span>
+            <button onclick="navigator.clipboard.writeText('VitKKijuJGM2REPHUPeCETCLavdtFGj6VZ3vDgjiRPz')" class="copy-btn">📋 Copy</button>
+            <a href="https://www.geckoterminal.com/solana/pools/VitKKijuJGM2REPHUPeCETCLavdtFGj6VZ3vDgjiRPz" target="_blank" class="link">🔍 GeckoTerminal</a>
         </div>
 
         <a href="index.html" class="back-link">← Back to Ghina Home</a>
